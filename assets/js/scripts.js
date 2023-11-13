@@ -5,8 +5,12 @@ $(document).ready(function () {
       $(this).toggleClass('open', 200);
     });
   });
-
+  .
  // Открытие popup
+  $('.menuburger').click(function () {
+    $(this).toggle('.header-content');
+  });
+
   $('.open-popup').click(function () {
     $('.popup-overlay').fadeIn();
     $('.popup').addClass('show');
