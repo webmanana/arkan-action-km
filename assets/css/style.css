@@ -695,20 +695,20 @@ video::after {
   .menuburger span:nth-child(4) {
     top: 16px;
   }
-  .menuburger-opened span:nth-child(4) {
+  .menuburger.active span:nth-child(4) {
     top: 8px;
     width: 0%;
     left: 50%;
   }
-  .menuburger-opened span:nth-child(3) {
+  .menuburger.active span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-  .menuburger-opened span:nth-child(2) {
+  .menuburger.active span:nth-child(2) {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  .menuburger-opened span:nth-child(1) {
+  .menuburger.active span:nth-child(1) {
     top: 8px;
     width: 0%;
     left: 50%;
