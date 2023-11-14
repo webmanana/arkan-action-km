@@ -1,4 +1,33 @@
 $(document).ready(function () {
+  //slider
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: false,
+    spaceBetween: 30,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+      },
+    },
+  });
+
+  //accordion
   $(function () {
     $('.accordion__item-title').on('click', function () {
       $(this).next().slideToggle(200);
@@ -9,6 +38,7 @@ $(document).ready(function () {
  // Открытие popup
   $('.menuburger').click(function () {
     $(this).toggleClass('active');
+    $(".header-content").toggleClass('active');
   });
 
   $('.open-popup').click(function () {
