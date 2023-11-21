@@ -35,13 +35,16 @@ $(document).ready(function () {
     });
   });
   
- // Открытие popup
   $('.menuburger').click(function () {
     $(this).toggleClass('active');
     $(".header-content").toggleClass('active');
   });
 
+  // Открытие popup
   $('.open-popup').click(function () {
+    var buttonValue = $(this).data('button-name'); // Получаем значение атрибута data-button-name
+    $('#source').val(buttonValue); // Устанавливаем значение в скрытое поле
+
     $('.popup-overlay').fadeIn();
     $('.popup').addClass('show');
   });
@@ -65,31 +68,38 @@ $(document).ready(function () {
   // Инициализация маски телефона
   $('#phone').mask('+7 (999) 999-99-99');
 
+  function setButtonClicked(buttonId) {
+    $('#buttonClicked').val(buttonId);
+  }
   // Отправка формы
   $('#feedback-form').submit(function (event) {
     event.preventDefault();
 
-    // Добавляем анимацию загрузки (можете использовать свой способ)
-    $('.popup-content').html('<p>Sending...</p>');
+    $('#feedback-form').hide();
+    $('.popup-content').show();
+
+    // Добавляем анимацию загрузки
+    $('.popup-content').html('<p>Отправка...</p>');
 
     // Отправка данных формы на сервер
     $.ajax({
       type: 'POST',
-      url: 'path/to/sendmail.php', // Укажите правильный путь к вашему sendmail.php
+      url: './sendmail.php',
       data: $('#feedback-form').serialize(),
+      dataType: 'json',
       success: function (response) {
-        if (response === 'success') {
+        if (response.success) {
           // Успешно отправлено
-          $('.popup-content').html('<p>Thank you! Form submitted.</p>');
-          setTimeout(closePopup, 2000); // Закрыть через 2 секунды (вы можете настроить это значение)
+          $('.popup-content').html('Спасибо! Данные успешно отправлены.');
         } else {
           // Ошибка отправки
-          $('.popup-content').html('<p>Error! Please try again later.</p>');
+          var errorMessage = response ? response.message : 'Неизвестная ошибка';
+          $('.popup-content').html('Ошибка! ' + errorMessage);
         }
       },
-      error: function () {
-        // Ошибка отправки
-        $('.popup-content').html('<p>Error! Please try again later.</p>');
+      error: function (xhr, status, error) {
+        // Ошибка AJAX
+        $('.popup-content').html('Ошибка AJAX! Пожалуйста, повторите попытку позже.');
       }
     });
   });

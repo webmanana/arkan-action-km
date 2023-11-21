@@ -4,12 +4,10 @@
   <meta charset="utf-8">
   <title>Трекер ARKAN</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Трекер ARKAN">
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <header>
@@ -27,7 +25,7 @@
       <div class="header-content">
         <div class="logo-container">
           <a href="/">
-            <img class="lazy" data-src="/img/logo.webp" alt="Трекер ARKAN">
+            <img class="lazy" data-src="./img/logo.webp" alt="Трекер ARKAN">
           </a>
         </div>
         <nav>
@@ -46,8 +44,8 @@
   </header>
 
   <section class="main">
-    <div class="main-mobile"></div>
-    <video class="lazy main-video" data-src="/img/video.mp4" autoplay loop playsinline muted></video>
+    <div class="main-mobile" style="background-image: url(./img/mobile-back.webp);"></div>
+    <video class="lazy main-video" data-src="./img/video.mp4" autoplay loop playsinline muted></video>
     <div class="main-content flex-container">
       <div class="left-main">
         <h1 class="left-main__title">Трекер ARKAN</h1>
@@ -60,7 +58,7 @@
           Всего 18 комплектов по специальной цене!
         </div>
         <div class="main-button">
-          <button class="red-button open-popup">
+          <button class="red-button open-popup" data-button-name="Верхний баннер">
             Забронировать
           </button>
         </div>
@@ -68,10 +66,10 @@
       <div class="right-main">
         <div class="adv-list">
           <ul>
-            <li><img class="lazy" data-src="/img/check.webp" alt=""> Онлайн мониторинг с любого устройства и push-уведомления</li>
-            <li><img class="lazy" data-src="/img/check.webp" alt=""> Бесплатный монтаж в течение 24 часов</li>
-            <li><img class="lazy" data-src="/img/check.webp" alt=""> Снижение затрат на автопарк до 30% уже со второго месяца</li>
-            <li><img class="lazy" data-src="/img/check.webp" alt=""> Оборудование совместимо с РНИС</li>
+            <li><img class="lazy" data-src="./img/check.webp" alt=""> Онлайн мониторинг с любого устройства и push-уведомления</li>
+            <li><img class="lazy" data-src="./img/check.webp" alt=""> Бесплатный монтаж в течение 24 часов</li>
+            <li><img class="lazy" data-src="./img/check.webp" alt=""> Снижение затрат на автопарк до 30% уже со второго месяца</li>
+            <li><img class="lazy" data-src="./img/check.webp" alt=""> Оборудование совместимо с РНИС</li>
           </ul>
         </div>
       </div>
@@ -85,6 +83,34 @@
         с какими проблемами сталкиваются владельцы автопарков и помогаем их решать
       </div>
       <div class="about-accordion">
+      <div class="about-accordion__item">
+          <div class="accordion__item-title">
+            Защищаем от нецелевого использования
+            <svg class="accordion__item-icon" role="presentation" focusable="false" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="20" stroke-width="0"></circle>
+              <g class="accordion__item-lines" stroke-width="2px" fill="none">
+                <path d="M9 20H31"></path><path d="M20 9V31"></path>
+              </g>
+            </svg>
+          </div>
+          <div class="accordion__item-desc">
+            Отслеживайте перемещение транспорта онлайн в мобильном приложении и личном кабинете, просматривайте архив событий. В случае отклонения транспорта от маршрута - вам придет push-уведомление на телефон.
+          </div>
+        </div>
+        <div class="about-accordion__item">
+          <div class="accordion__item-title">
+            Помогаем избежать слива топлива
+            <svg class="accordion__item-icon" role="presentation" focusable="false" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="20" stroke-width="0"></circle>
+              <g class="accordion__item-lines" stroke-width="2px" fill="none">
+                <path d="M9 20H31"></path><path d="M20 9V31"></path>
+              </g>
+            </svg>
+          </div>
+          <div class="accordion__item-desc">
+            Системы мониторинга ARKAN позволяют контролировать текущий уровень топлива в баке, а также все заправки и сливы.
+          </div>
+        </div>
         <div class="about-accordion__item">
           <div class="accordion__item-title">
             Спасем от угона
@@ -132,12 +158,12 @@
           <span>- Совместимость с РНИС</span>
           <span>- Мобильное приложение</span>
         </div>
-        <button class="red-button open-popup">
+        <button class="red-button open-popup" data-button-name="Купить со скидкой">
           Купить со скидкой
         </button>
       </div>
       <div class="complect-img">
-        <img class="lazy" data-src="/img/complect.webp" alt="">
+        <img class="lazy" data-src="./img/complect.webp" alt="Базовый комплект" width="650" height=620>
       </div>
     </div>
   </section>
@@ -152,7 +178,7 @@
             <div class="mobile-how__line"></div>
           </div>
           <div class="how-img flex-container just-center">
-            <img class="lazy" data-src="/img/settings.webp" alt="">
+            <img class="lazy" data-src="./img/settings.webp" alt="">
           </div>
           <div class="how-title center">Решение</div>
           <div class="how-desc center text">Подбираем оптимальные комплекты под ваши задачи по самой выгодной цене.</div>
@@ -164,7 +190,7 @@
             <div class="mobile-how__line"></div>
           </div>
           <div class="how-img flex-container just-center">
-            <img class="lazy" data-src="/img/hours.webp" alt="">
+            <img class="lazy" data-src="./img/hours.webp" alt="">
           </div>
           <div class="how-title center">Установка</div>
           <div class="how-desc center text">Производим установку бесплатно в нашем Сервисном центре или приезжаем на вашу территорию. Мы стараемся придерживаться принципа - 24 часа от заявки до установки.</div>
@@ -175,7 +201,7 @@
             <div class="mobile-how__number">3</div>
           </div>
           <div class="how-img flex-container just-center">
-            <img class="lazy" data-src="/img/eye.webp" alt="">
+            <img class="lazy" data-src="./img/eye.webp" alt="">
           </div>
           <div class="how-title center">Контроль</div>
           <div class="how-desc center text">Работать с нашими системами просто и удобно. У вас всегда все под контролем с любого устройства там, где есть интернет.</div>
@@ -199,11 +225,11 @@
       <div class="slider">
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img class="lazy" data-src="/img/photo-1.webp" alt=""></div>
-            <div class="swiper-slide"><img class="lazy" data-src="/img/photo-2.webp" alt=""></div>
-            <div class="swiper-slide"><img class="lazy" data-src="/img/photo-3.webp" alt=""></div>
-            <div class="swiper-slide"><img class="lazy" data-src="/img/photo-4.webp" alt=""></div>
-            <div class="swiper-slide"><img class="lazy" data-src="/img/photo-5.webp" alt=""></div>
+            <div class="swiper-slide"><img class="lazy" data-src="./img/photo-1.webp" alt="Платформе Wialon" width="617" height="600"></div>
+            <div class="swiper-slide"><img class="lazy" data-src="./img/photo-2.webp" alt="Платформе Wialon" width="617" height="600"></div>
+            <div class="swiper-slide"><img class="lazy" data-src="./img/photo-3.webp" alt="Платформе Wialon" width="617" height="600"></div>
+            <div class="swiper-slide"><img class="lazy" data-src="./img/photo-4.webp" alt="Платформе Wialon" width="617" height="600"></div>
+            <div class="swiper-slide"><img class="lazy" data-src="./img/photo-5.webp" alt="Платформе Wialon" width="617" height="600"></div>
           </div>
           <div class="swiper-pagination"></div>
           <div class="pagination-container">
@@ -213,14 +239,14 @@
         </div>
       </div>
 
-      <div class="gallery-text container center ">
+      <div class="gallery-text container center">
         Получите тестовый доступ на платформу
       </div>
       <div class="arrow-container">
         <svg role="presentation" class="arrow-icon" style="fill:#c9c9c9; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 180"><path d="M54.1 109c-.8 0-1.6-.4-2-1.1-.8-1.1-.5-2.7.6-3.5 1.3-.9 6.8-4 11.6-6.6-15.9-1.3-29.2-8.3-38.5-20.2C8.9 56 8.5 24.1 13.2 3.4c.3-1.3 1.7-2.2 3-1.9 1.3.3 2.2 1.7 1.9 3-4.5 19.6-4.2 49.8 11.6 70 9 11.5 21.5 17.7 37.2 18.4l-1.8-2.3c-1.4-1.7-2.7-3.4-4.1-5.1-.7-.9-1.5-1.9-2.3-2.9-.9-1.1-.7-2.6.4-3.5 1.1-.9 2.6-.7 3.5.4 0 0 0 .1.1.1l6.4 7.9c.5.5.9 1.1 1.4 1.7 1.5 1.8 3.1 3.6 4.4 5.6 0 .1.1.1.1.2.1.3.2.5.3.8v.6c0 .2-.1.4-.2.6-.1.1-.1.3-.2.4-.1.2-.3.4-.5.6-.1.1-.3.2-.5.3-.1 0-.1.1-.2.1-1.2.6-16 8.6-18.1 10-.5.5-1 .6-1.5.6z"></path></svg>
       </div>
-      <div class="flex-container container just-center ">
-        <button class="red-button open-popup">Получить</button>
+      <div class="flex-container container just-center button-container">
+        <button class="red-button open-popup" data-button-name="Получите тестовый доступ на платформу">Получить</button>
       </div>
       
     </div>
@@ -231,7 +257,7 @@
       <div class="decisions-content flex-container">
         <div class="decisions-item flex-container">
           <div class="decisions-img">
-            <img class="lazy" data-src="/img/pic-1.webp" alt="Реле блокировки двигателя от 2 000 ₽">
+            <img class="lazy" data-src="./img/new-1.webp" alt="Реле блокировки двигателя от 2 000 ₽" width="240" height="440">
           </div>
           <div class="decisions-info">
             <div class="decisions-title">Сдаете авто в аренду? Необходим контроль за спецтехникой?</div>
@@ -239,11 +265,11 @@
             <div class="decisions-price">Реле блокировки двигателя <br>от 2 000 ₽</div>
             <div class="decisions-button">Заказать</div>
           </div>
-          <button class="decisions-url open-popup"></button>
+          <button aria-label="Заказать" class="decisions-url open-popup" data-button-name="Реле блокировки двигателя"></button>
         </div>
         <div class="decisions-item flex-container">
           <div class="decisions-img">
-            <img class="lazy" data-src="/img/pic-2.webp" alt="Датчик уровня топлива с тарировкой от 11 500 ₽">
+            <img class="lazy" data-src="./img/new-2.webp" alt="Датчик уровня топлива с тарировкой от 11 500 ₽" width="240" height="440">
           </div>
           <div class="decisions-info">
             <div class="decisions-title">Хотите избежать неконтролируемых трат на топливо?</div>
@@ -251,13 +277,13 @@
             <div class="decisions-price">Датчик уровня топлива с <br>тарировкой от 11 500 ₽</div>
             <div class="decisions-button">Заказать</div>
           </div>
-          <button class="decisions-url open-popup"></button>
+          <button aria-label="Заказать" class="decisions-url open-popup" data-button-name="Датчик уровня топлива"></button>
         </div>
       </div>
       <div class="decisions-content flex-container">
         <div class="decisions-item flex-container">
           <div class="decisions-img">
-            <img class="lazy" data-src="/img/pic-3.webp" alt="Переносной трекер от 5 000 ₽">
+            <img class="lazy" data-src="./img/new-3.webp" alt="Переносной трекер от 5 000 ₽" width="240" height="440">
           </div>
           <div class="decisions-info">
             <div class="decisions-title">Необходимо переставлять трекер с одного авто на другое?</div>
@@ -265,11 +291,11 @@
             <div class="decisions-price">Переносной трекер <br>от 5 000 ₽</div>
             <div class="decisions-button">Заказать</div>
           </div>
-          <button class="decisions-url open-popup"></button>
+          <button aria-label="Заказать" class="decisions-url open-popup" data-button-name="Переносной трекер"></button>
         </div>
         <div class="decisions-item flex-container">
           <div class="decisions-img">
-            <img class="lazy" data-src="/img/pic-4.webp" alt="Видеоконтроль и мониторинг с голосовой связью">
+            <img class="lazy" data-src="./img/new-4.webp" alt="Видеоконтроль и мониторинг с голосовой связью" width="240" height="440">
           </div>
           <div class="decisions-info">
             <div class="decisions-title">Нужен дополнительный контроль водителей?</div>
@@ -277,7 +303,7 @@
             <div class="decisions-price"></div>
             <div class="decisions-button">Заказать</div>
           </div>
-          <a href="#" class="decisions-url open-popup"></a>
+          <button aria-label="Заказать" class="decisions-url open-popup" data-button-name="Видеоконтроль и мониторинг"></button>
         </div>
       </div>
     </div>
@@ -327,7 +353,7 @@
   </section>
   <section class="faq">
     <div class="faq-wrap container flex-container flex-column section">
-      <h2 class="title">Почему выбирают нас?</h2>
+      <h2 class="title">FAQ</h2>
       <div class="faq-container">
         <div class="about-accordion">
           <div class="about-accordion__item faq-item">
@@ -392,8 +418,8 @@
         <div class="arrow-container">
           <svg role="presentation" class="arrow-icon" style="fill:#c9c9c9; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 180"><path d="M54.1 109c-.8 0-1.6-.4-2-1.1-.8-1.1-.5-2.7.6-3.5 1.3-.9 6.8-4 11.6-6.6-15.9-1.3-29.2-8.3-38.5-20.2C8.9 56 8.5 24.1 13.2 3.4c.3-1.3 1.7-2.2 3-1.9 1.3.3 2.2 1.7 1.9 3-4.5 19.6-4.2 49.8 11.6 70 9 11.5 21.5 17.7 37.2 18.4l-1.8-2.3c-1.4-1.7-2.7-3.4-4.1-5.1-.7-.9-1.5-1.9-2.3-2.9-.9-1.1-.7-2.6.4-3.5 1.1-.9 2.6-.7 3.5.4 0 0 0 .1.1.1l6.4 7.9c.5.5.9 1.1 1.4 1.7 1.5 1.8 3.1 3.6 4.4 5.6 0 .1.1.1.1.2.1.3.2.5.3.8v.6c0 .2-.1.4-.2.6-.1.1-.1.3-.2.4-.1.2-.3.4-.5.6-.1.1-.3.2-.5.3-.1 0-.1.1-.2.1-1.2.6-16 8.6-18.1 10-.5.5-1 .6-1.5.6z"></path></svg>
         </div>
-        <div class="flex-container container just-center ">
-          <button class="red-button open-popup">Заказать</button>
+        <div class="flex-container container just-center button-container ">
+          <button class="red-button open-popup" data-button-name="Закажите бесплатный тест-драйв">Заказать</button>
         </div>
       </div>
     </div>
@@ -411,7 +437,7 @@
       <div style="position:relative;overflow:hidden;">
         <a href="https://yandex.ru/maps/org/arkan/129659151502/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Arkan</a><a href="https://yandex.ru/maps/2/saint-petersburg/category/monitoring_of_motor_vehicles/184107791/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Мониторинг автотранспорта в Санкт‑Петербурге</a>
         <a href="https://yandex.ru/maps/2/saint-petersburg/category/security_and_alarm_systems/184105350/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Системы безопасности и охраны в Санкт‑Петербурге</a>
-        <iframe class="lazy" data-src="https://yandex.ru/map-widget/v1/?ll=30.339736%2C59.914922&mode=search&oid=129659151502&ol=biz&z=17" width="100%" height="600" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+        <iframe class="lazy" title="Карта" data-src="https://yandex.ru/map-widget/v1/?ll=30.339736%2C59.914922&mode=search&oid=129659151502&ol=biz&z=17" width="100%" height="600" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
       </div>
     </div>
   </section>
@@ -420,27 +446,59 @@
       <h4 class="popup-title">Оставьте свои данные и мы свяжемся с вами!</h4>
       
       <!-- Добавленная форма -->
-      <form id="feedback-form" class="flex-container flex-column">
+      <form id="feedback-form" class="flex-container flex-column" method="post">
         <input type="text" class="feedback-input" id="name" name="name" placeholder="Ваше имя" required>
         <input type="text" class="feedback-input" id="phone" name="phone" placeholder="+7 (999) 999-99-99" required>
-  
+
+        <!-- Скрытое поле с информацией о кнопке -->
+        <input type="hidden" id="source" name="source" value="">
         <button type="submit" class="red-button">Отправить</button>
       </form>
-      
+      <div class="popup-content">
+
+      </div>
       <!-- Иконка крестика -->
       <div class="close-popup">&#10006;</div>
     </div>
   </div>
-  <script src="/assets/js/lazyload.min.js"></script>
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/scripts.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+  <script src="./assets/js/lazyload.min.js"></script>
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <script src="./assets/js/jquery.maskedinput.min.js"></script>
+  <script src="./assets/js/scripts.js"></script>
   <script>
+    //отложенная загрузка стилей
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = './assets/css/swiper-bundle.min.css';
+
+    // Добавляем элемент в конец HEAD секции
+    document.head.appendChild(link);
     var lazyLoadInstance = new LazyLoad({
       // Your custom settings go here
     });
-    
   </script>
+  <script>
+    var __cs = __cs || [];
+    __cs.push(["setCsAccount", "5AgDqhImkTL4_YFNw9HTV4UImFykDMwI"]);
+  </script>
+  <script type="text/javascript" async src="https://app.comagic.ru/static/cs.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(35100805, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/35100805" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
 </body>
 </html>

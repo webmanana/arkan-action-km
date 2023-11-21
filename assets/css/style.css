@@ -50,6 +50,8 @@ body, html {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
+  max-width: 100%;
+  width: 100%;
 }
 .container {
   max-width: 1200px;
@@ -154,7 +156,7 @@ header {
 .main-content {
   flex-direction: row;
   position: absolute;
-  top: 200px;
+  top: 250px;
   justify-content: center;
   width: 100%;
   gap: 150px;
@@ -357,6 +359,8 @@ header {
 .how-content {
   justify-content: flex-start;
   padding-top: 80px;
+  width: 100%;
+  position: relative;
 }
 .gallery {
   background: #efefef;
@@ -381,17 +385,17 @@ header {
   margin-bottom: 40px;
 }
 .swiper-button-next, .swiper-button-prev {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgb(232, 232, 232);
+  width: 40px!important;
+  height: 40px!important;
+  border-radius: 50%!important;
+  background-color: rgb(232, 232, 232)!important;
 }
 .swiper-button-next:after, .swiper-button-prev:after{
-  color: #000;
-  font-size: 18px;
+  color: #000!important;
+  font-size: 18px!important;
 }
 .swiper {
-  position: relative;
+  position: relative!important;
 }
 .slider {
   padding-top: 80px;
@@ -475,6 +479,7 @@ header {
 .decisions-img img {
   display: flex;
   object-fit: cover;
+  width: 100%;
 }
 .decisions-url {
   position: absolute;
@@ -564,6 +569,16 @@ header {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  z-index: 111;
+}
+.popup-content {
+  font-weight: 600;
+  padding: 20px;
+  width: 100%;
+  background-color: #62c584;
+  text-align: center;
+  color: #fff;
+  display: none;
 }
 .close-popup {
   position: absolute;
@@ -581,8 +596,14 @@ header {
   border: 1px solid #c9c9c9;
   font-weight: 300;
 }
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 8px!important;
+}
 .header-mobile, #contact, .mobile-how {
   display: none;
+}
+.comagic-widget.comagic-c-consultant-container, .comagic-c-consultant-label, .comagic-c-invite {
+  display: none!important;
 }
 @media (max-width: 1200px) {
   .container {
@@ -646,7 +667,12 @@ header {
   .complect-wrap {
     flex-wrap: wrap;
   }
+  .complect-wrap {
+    width: 100%;
+    position: relative;
+  }
   .complect-img {
+    width: 100%;
     position: relative;
     z-index: 1;
     left: 0;
@@ -804,6 +830,13 @@ header {
   .main-video {
     display: none;
   }
+  .popup {
+    width: 100%;
+  }
+  .gallery-text, .contact-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .left-main__title, .main-price {
     font-size: 32px;
   }
@@ -812,13 +845,13 @@ header {
     padding-top: 60px;
   }
   .red-button {
-    padding: 20px 60px;
+    padding: 20px 30px;
+    width: 100%;
   }
   .main {
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   }
   .main-mobile {
-    background: url(/img/mobile-back.webp);
     background-position: center;
     display: flex;
     width: 100%;
@@ -877,10 +910,17 @@ header {
     width: 40px!important;
     height: 40px!important;
   }
+  .button-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 @media (max-width: 460px) {
   .decisions-img {
     width: 100%;
+    height: 150px;
+  }
+  .decisions-img img {
     height: 150px;
   }
   .decisions-info {
@@ -897,6 +937,9 @@ header {
   }
   .how-img {
     justify-content: flex-start;
+  }
+  .popup {
+    top: 200px;
   }
   .how-title {
     text-align: left;
@@ -958,14 +1001,24 @@ header {
   .how-content .how-item:first-child .how-desc {
     height: 80px;
   }
+  .popup {
+    padding: 20px;
+  }
+  .popup-title {
+    font-size: 24px;
+  }
 }
 @media (max-width: 420px) {
   .mobile-how_2 .mobile-how__line {
     height: 262px;
+  }
+  .popup {
+    top: 150px;
   }
 }
 @media (max-width: 360px) {
   .mobile-how_2 .mobile-how__line {
     height: 316px;
   }
+  
 }
